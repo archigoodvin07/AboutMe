@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="myName"
+            type="com.example.aboutme.MyName" />
+    </data>
+
 <LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/textView"
@@ -46,7 +53,9 @@
         android:layout_height="wrap_content"
         android:cursorVisible="true"
         android:textAlignment="center"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:text="@={myName.nickname}"
+        />
 
     <ImageView
         android:id="@+id/imageView"
